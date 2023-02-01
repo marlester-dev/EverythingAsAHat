@@ -10,11 +10,11 @@
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/members/marlester__/projects",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/marlester-dev/EverythingAsAHat"
   },
 
   "license": "MIT",
-  "icon": "assets/everythingasahat/example-icon.png",
+  "icon": "assets/everythingasahat/icon.png",
 
   "environment": "*",
   "mixins": [
@@ -25,6 +25,6 @@
     "fabricloader": ">=0.11.3",
     "fabric": "*",
     "minecraft": "*",
-    "java": ">=17"
+    "java": ">=8"
   }
 }
