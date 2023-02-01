@@ -17,11 +17,6 @@
   "icon": "assets/everythingasahat/example-icon.png",
 
   "environment": "*",
-  "entrypoints": {
-    "main": [
-      "net.marlester.everythingasahat.EverythingAsAHat"
-    ]
-  },
   "mixins": [
     "everythingasahat.mixins.json"
   ],
