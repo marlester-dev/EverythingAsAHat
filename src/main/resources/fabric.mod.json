@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "everythingasahat",
+  "version": "${version}",
+
+  "name": "EverythingAsAHat",
+  "description": "Wear Everything in a head slot!",
+  "authors": [
+    "marlester__"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/members/marlester__/projects",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+  "icon": "assets/everythingasahat/example-icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.marlester.everythingasahat.EverythingAsAHat"
+    ]
+  },
+  "mixins": [
+    "everythingasahat.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "*",
+    "java": ">=17"
+  }
+}
