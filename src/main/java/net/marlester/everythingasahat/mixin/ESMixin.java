@@ -26,7 +26,7 @@ public class ESMixin {
                 equipmentSlot = item == Items.SHIELD ? EquipmentSlot.OFFHAND : EquipmentSlot.MAINHAND;
             }
         } else {
-            equipmentSlot = EquipmentSlot.HEAD; //test
+            equipmentSlot = EquipmentSlot.HEAD;
         }
 
         if (equipmentSlot == EquipmentSlot.MAINHAND) {
