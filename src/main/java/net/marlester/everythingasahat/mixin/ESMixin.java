@@ -1,7 +1,7 @@
 package net.marlester.everythingasahat.mixin;
 
-import net.minecraft.block.AbstractSkullBlock;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.item.*;
@@ -14,23 +14,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class ESMixin {
     @Inject(at = @At("HEAD"), method = "getPreferredEquipmentSlot", cancellable = true)
     private static void getPreferredEquipmentSlot(ItemStack itemStack, CallbackInfoReturnable<EquipmentSlot> cir) {
-        EquipmentSlot equipmentSlot;
         Item item = itemStack.getItem();
-
-        if (item != Blocks.CARVED_PUMPKIN.asItem() || !(((BlockItem) item).getBlock() instanceof AbstractSkullBlock)) {
-            if (item instanceof ArmorItem) {
-                equipmentSlot = ((ArmorItem) item).getSlotType();
-            } else if (item == Items.ELYTRA) {
-                equipmentSlot = EquipmentSlot.CHEST;
-            } else {
-                equipmentSlot = item == Items.SHIELD ? EquipmentSlot.OFFHAND : EquipmentSlot.MAINHAND;
-            }
-        } else {
-            equipmentSlot = EquipmentSlot.HEAD;
-        }
-
-        if (equipmentSlot == EquipmentSlot.MAINHAND) {
+        // !(item instanceof SkullItem) does not properly work, so I have to list every skull/head
+        if (!(item instanceof ElytraItem) && !(item instanceof ShieldItem) && !(item instanceof ArmorItem) && item != Blocks.CARVED_PUMPKIN.asItem() && item != Items.SKELETON_SKULL && item != Items.WITHER_SKELETON_SKULL && item != Items.CREEPER_HEAD && item != Items.DRAGON_HEAD && item != Items.PLAYER_HEAD && item != Items.ZOMBIE_HEAD) {
             cir.setReturnValue(EquipmentSlot.HEAD);
+        }
+        // fix for shift+lmb items
+        if (Screen.hasShiftDown() && !(item instanceof ElytraItem) && !(item instanceof ShieldItem) && !(item instanceof ArmorItem) && item != Blocks.CARVED_PUMPKIN.asItem() && item != Items.SKELETON_SKULL && item != Items.WITHER_SKELETON_SKULL && item != Items.CREEPER_HEAD && item != Items.DRAGON_HEAD && item != Items.PLAYER_HEAD && item != Items.ZOMBIE_HEAD) {
+            cir.setReturnValue(EquipmentSlot.MAINHAND);
         }
     }
 }
