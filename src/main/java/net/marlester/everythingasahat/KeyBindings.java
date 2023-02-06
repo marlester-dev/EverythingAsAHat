@@ -8,7 +8,7 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.slot.SlotActionType;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings implements ClientModInitializer {
@@ -32,10 +32,10 @@ public class KeyBindings implements ClientModInitializer {
                             player
                     );
                 } else {
-                    player.sendMessage(new TranslatableText("everythingasahat.mainhand.is.empty.while.pressing.keybinding1"), false);
+                    player.sendMessage(Text.translatable("everythingasahat.mainhand.is.empty.while.pressing.keybinding1"), false);
                     break;
                 }
-                player.sendMessage(new TranslatableText("everythingasahat.keybinding1.equipped.item.on.head.successfully"), false);
+                player.sendMessage(Text.translatable("everythingasahat.keybinding1.equipped.item.on.head.successfully"), false);
             }
         });
     }
