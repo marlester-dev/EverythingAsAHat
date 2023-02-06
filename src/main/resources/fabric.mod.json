@@ -16,6 +16,11 @@
   "license": "MIT",
 
   "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.marlester.everythingasahat.KeyBindings"
+    ]
+  },
   "mixins": [
     "everythingasahat.mixins.json"
   ],
