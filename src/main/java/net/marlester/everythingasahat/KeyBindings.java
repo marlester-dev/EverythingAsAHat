@@ -21,7 +21,7 @@ public class KeyBindings implements ClientModInitializer {
                 if (!player.getMainHandStack().isEmpty()) {
                     MinecraftClient CLIENT = MinecraftClient.getInstance();
 
-                    final int source = player.inventory.selectedSlot;
+                    final int source = player.getInventory().selectedSlot;
                     final int destination = 5; // helmet slot, I can find all of them on imgur.com/4jLf3l5
 
                     CLIENT.interactionManager.clickSlot (
