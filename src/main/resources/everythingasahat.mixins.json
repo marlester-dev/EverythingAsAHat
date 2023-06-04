@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.marlester.everythingasahat.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ESMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
