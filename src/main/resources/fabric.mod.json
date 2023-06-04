@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "everythingasahat",
+  "version": "${version}",
+
+  "name": "EverythingAsAHat",
+  "description": "Wear Everything in a head slot!",
+  "authors": [
+    "marlester__"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/members/marlester__/projects",
+    "sources": "https://github.com/marlester-dev/EverythingAsAHat"
+  },
+
+  "license": "MIT",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.marlester.everythingasahat.KeyBindings"
+    ]
+  },
+  "mixins": [
+    "everythingasahat.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "*",
+    "java": ">=16"
+  }
+}
