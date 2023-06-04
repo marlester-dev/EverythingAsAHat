@@ -1,0 +1,6 @@
+{
+  "everythingasahat.key.category": "Everything As A Hat",
+  "everythingasahat.keybinding_1": "Положить предмет на голову",
+  "everythingasahat.mainhand.is.empty.while.pressing.keybinding1": "[ERROR] Ты должен держать предмет в главной руке чтобы положить его на голову!",
+  "everythingasahat.keybinding1.equipped.item.on.head.successfully": "Предмет (возможно) положен на голову! (WARN: Щиты и т.д. не поддерживаются. Максимум 1 предмет на голове)"
+}

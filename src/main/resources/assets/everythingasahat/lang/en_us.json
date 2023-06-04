@@ -1,0 +1,6 @@
+{
+  "everythingasahat.key.category": "Everything As A Hat",
+  "everythingasahat.keybinding_1": "Put item on the head",
+  "everythingasahat.mainhand.is.empty.while.pressing.keybinding1": "[ERROR] You must hold the item in your main hand to put it on your head.",
+  "everythingasahat.keybinding1.equipped.item.on.head.successfully": "The item is (maybe) put on your head! (WARN: Shields, etc. aren't supported. You can wear only 1 item on your head)"
+}
