@@ -14,8 +14,6 @@ import org.lwjgl.glfw.GLFW;
 public class KeyBindings implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        //to-do: if player tries to wear elytra, armor, shield, etc. send the right message and also make the config option for it
-        //to-do 2: spread it on all (mc) versions of the mod
         KeyBinding keyBinding1 = KeyBindingHelper.registerKeyBinding(new KeyBinding("everythingasahat.keybinding_1", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_H, "everythingasahat.key.category"));
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (keyBinding1.wasPressed()) {
