@@ -7,7 +7,6 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.screen.PlayerScreenHandler;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
@@ -15,7 +14,6 @@ import org.lwjgl.glfw.GLFW;
 public class KeyBindings implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        PlayerScreenHandler
         KeyBinding keyBinding1 = KeyBindingHelper.registerKeyBinding(new KeyBinding("everythingasahat.keybinding_1", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_H, "everythingasahat.key.category"));
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (keyBinding1.wasPressed()) {
