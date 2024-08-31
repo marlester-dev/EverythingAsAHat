@@ -1,0 +1,6 @@
+{
+  "everythingasahat.key.category": "Everything As A Hat",
+  "everythingasahat.keybinding_1": "Den Gegenstand auf den Kopf legen",
+  "everythingasahat.mainhand.is.empty.while.pressing.keybinding1": "[FEHLER] Du musst den Gegenstand in deiner Haupthand halten, um es auf deinen Kopf zu legen!",
+  "everythingasahat.keybinding1.equipped.item.on.head.successfully": "Der Gegenstand wurde auf deinen Kopf gelegt! (ACHTUNG: Du kannst höchstens 1 Gegenstand auf dem Haupt haben)"
+}
