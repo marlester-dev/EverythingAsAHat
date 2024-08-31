@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.6-SNAPSHOT'
+	id 'fabric-loom' version '1.6-SNAPSHOT' //loom 1.6 requires java 17, so use it with gradle
 	id 'maven-publish'
 }
 
