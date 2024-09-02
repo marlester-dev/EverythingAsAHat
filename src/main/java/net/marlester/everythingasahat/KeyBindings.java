@@ -8,7 +8,7 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.screen.slot.SlotActionType;
-import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyBindings implements ClientModInitializer {
@@ -25,17 +25,17 @@ public class KeyBindings implements ClientModInitializer {
                     final int destination = 5; // helmet slot, I can find all of them on imgur.com/4jLf3l5
 
                     CLIENT.interactionManager.clickSlot (
-                            player.playerScreenHandler.syncId,
-                            destination,
-                            source,
-                            SlotActionType.SWAP,
-                            player
+                        player.playerScreenHandler.syncId,
+                        destination,
+                        source,
+                        SlotActionType.SWAP,
+                        player
                     );
                 } else {
-                    player.sendMessage(Text.translatable("everythingasahat.mainhand.is.empty.while.pressing.keybinding1"), false);
+                    player.sendMessage(new TranslatableText("everythingasahat.mainhand.is.empty.while.pressing.keybinding1"), false);
                     break;
                 }
-                player.sendMessage(Text.translatable("everythingasahat.keybinding1.equipped.item.on.head.successfully"), false);
+                player.sendMessage(new TranslatableText("everythingasahat.keybinding1.equipped.item.on.head.successfully"), false);
             }
         });
     }
