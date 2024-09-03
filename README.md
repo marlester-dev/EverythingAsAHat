@@ -1,3 +1,4 @@
+[forge version sources](https://github.com/marlester-dev/EAAH-Forge)
 
 # EverythingAsAHat
 With this mod, you can wear anything as a hat!
